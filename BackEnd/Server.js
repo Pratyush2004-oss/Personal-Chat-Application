@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 import authRoutes from './Routes/auth.routes.js'
 import messageRoutes from './Routes/message.routes.js'
 import userRouters from './Routes/user.routes.js';
-import { app,server } from './Socket/Socket.js';       //importing Socket from Socket.js
+import { app, server } from './Socket/Socket.js';       //importing Socket from Socket.js
 
 // importing database connection 
 import connectToMongoDB from './DB/ConnectionMongoDB.js';
@@ -39,12 +39,12 @@ app.use('/api/messages', messageRoutes)
 // used to get users 
 app.use("/api/users", userRouters)
 
-app.get("*" , (req,res) => {
+app.get("*", (req, res) => {
 
     // setting the header 
     res.setHeader('Content-Type', 'text/html');
     // sending the file 
-    const filePath = path.join(__dirname,"frontend","dist","index.html")
+    const filePath = path.join(__dirname, "frontend", "dist", "index.html")
     res.sendFile(filePath)
 })
 
