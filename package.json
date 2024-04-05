@@ -2,7 +2,7 @@
   "name": "chat-application-full-using-react-socket-mongo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Server.js",
   "scripts": {
     "server": "nodemon BackEnd/Server.js",
     "start" : "node BackEnd/Server.js",
